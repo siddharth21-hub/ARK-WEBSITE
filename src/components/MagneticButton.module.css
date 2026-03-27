@@ -1,0 +1,16 @@
+/* Wrapper expands the magnetic zone by 40px on all sides */
+.wrap {
+  display: inline-block;
+  padding: 40px;
+  margin: -40px;
+  /* Desktop-only — pointer: coarse (touch) gets no magnetic zone */
+  @media (pointer: coarse) {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.inner {
+  display: inline-block;
+  will-change: transform;
+}

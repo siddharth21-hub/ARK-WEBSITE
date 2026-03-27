@@ -1,0 +1,15 @@
+/* Each word sits inline with an overflow clip */
+.wordMask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  /* Small breathing room so descenders don't clip */
+  padding-bottom: 0.22em;
+  margin-bottom: -0.22em;
+  /* Preserve inter-word space */
+  margin-right: 0.22em;
+}
+
+.word {
+  display: inline-block;
+}

@@ -1,0 +1,86 @@
+.container {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: var(--z-modal);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+/* ── Chat overlay ── */
+.overlay {
+  width: 340px;
+  background: var(--white-pure);
+  border: 1px solid var(--accent-sage-border);
+  box-shadow: var(--shadow-medium);
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.headerLabel {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--text-dark-tertiary);
+}
+
+.closeBtn {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  color: var(--text-dark-tertiary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  padding: 2px 4px;
+  transition: color 0.2s;
+}
+
+.closeBtn:hover {
+  color: var(--text-dark);
+}
+
+/* ── Float button ── */
+.btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--accent-terra);
+  color: var(--white-pure);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 24px var(--accent-terra-dim);
+  transition: transform 0.25s var(--ease-expo);
+  flex-shrink: 0;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .container {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .overlay {
+    width: calc(100vw - 40px);
+  }
+}

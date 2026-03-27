@@ -1,0 +1,32 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(196, 168, 130, 0.6);
+  background: transparent;
+  pointer-events: none;
+  z-index: var(--z-toast);
+  transform: translate(
+    calc(var(--cursor-x, -100px) - 50%),
+    calc(var(--cursor-y, -100px) - 50%)
+  );
+  transition: width 0.2s var(--ease-expo),
+              height 0.2s var(--ease-expo),
+              border-color 0.2s ease;
+  will-change: transform;
+}
+
+.cursor.expanded {
+  width: 18px;
+  height: 18px;
+  border-color: rgba(196, 168, 130, 0.9);
+}
+
+@media (hover: none) {
+  .cursor {
+    display: none !important;
+  }
+}
